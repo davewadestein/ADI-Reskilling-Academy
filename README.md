@@ -20,3 +20,10 @@
 # Immutable vs. Mutable Types
 * mutable:
 * immutable: strings
+
+# What tools/skills do I need to be a good programmer?
+* good problems-solving skills
+  * ability to break things into smaller pieces
+  * methodical / attention to detail
+* perseverance
+* not math sense, per se
