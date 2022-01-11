@@ -17,14 +17,19 @@
  * Variable names–they should be descriptive
  * Follow formatting rules for your language
    * get a plug-in to make it a non-issue
+ * DRY = Don't Repeat Yourself
 
 # Python "truthiness"
 * any nonzero number is True (0, 0.0 are False)
 * a nonempty string is True (empty string is False)
 
-# Immutable vs. Mutable Types
-* mutable:
-* immutable: strings
+# Python Types
+* Immutable vs. Mutable Types
+  * mutable:
+  * immutable: strings
+* simple types (scalars) vs. containers
+  * simple types: int, float, bool
+  * containers: str
 
 # What tools/skills do I need to be a good programmer?
 * good problems-solving skills
@@ -32,3 +37,7 @@
   * methodical / attention to detail
 * perseverance
 * not math sense, per se
+
+# "Pythonic"
+* writing code in a way that experienced Python programmers would write it
+* idiomatic
