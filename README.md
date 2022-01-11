@@ -13,6 +13,7 @@
 
 # Best practices for programming
  * "Programs must be written for people to read, and only incidentally for machines to execute." –Hal Abelson
+ * Eagleson's Law: "Any code you wrote more than 6 months ago might as well have been written by someone else"
  * Prefer clear code over comments
  * Variable names–they should be descriptive
  * Follow formatting rules for your language
