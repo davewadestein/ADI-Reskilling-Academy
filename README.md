@@ -16,3 +16,7 @@
 # Python "truthiness"
 * any nonzero number is True (0, 0.0 are False)
 * a nonempty string is True (empty string is False)
+
+# Immutable vs. Mutable Types
+* mutable:
+* immutable: strings
