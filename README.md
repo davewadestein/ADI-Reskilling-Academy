@@ -29,6 +29,8 @@ Project Manager: sabrina@developintelligence.com
  * Follow formatting rules for your language
    * get a plug-in to make it a non-issue
  * DRY = Don't Repeat Yourself
+ * According to DWS: You need "mechanical sympathy" to excel at programming or a programming language
+   * Jackie Stewart
 
 # Python "truthiness"
 * any nonzero number is True (0, 0.0 are False)
