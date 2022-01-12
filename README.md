@@ -44,6 +44,9 @@ Project Manager: sabrina@developintelligence.com
   * simple types: int, float, bool
   * containers: str, list
 
+# Walrus Operator
+  * add this
+  * 
 # What tools/skills do I need to be a good programmer?
 * good problems-solving skills
   * ability to break things into smaller pieces
