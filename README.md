@@ -1,5 +1,12 @@
-# BDFL = Benevolent Dictator for Life (formerly Guido van Rossum)
-* Guido stepped down as BDFL in 2019 due to social media harrassment after a PEP was approved
+### Binder link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
+
+# Some Terminology
+* "Pythonic"
+  * a coding style that leverages Python's unique features to write code that is readable and beautiful.
+  * writing code in a way that experienced Python programmers would write it
+  * idiomatic
+* BDFL = Benevolent Dictator for Life (formerly Guido van Rossum)
+  * Guido stepped down as BDFL in 2019 due to social media harrassment after a contentious PEP was approved
 
 # Important points about teaching/learning
 * if you can't explain it in lay terms, you don't truly understand it
@@ -8,7 +15,7 @@
   * do/don't go down the rabbit hole
 
 # Some formatting rules for Python
-* variable only use lower case, e.g., year, cost, cost_per_ounce
+* variables only use lower case and underscores, e.g., year, cost, cost_per_ounce
 * things you want to identify as constants would be all upper case, e.g., ROUTING_NUMBER
 
 # Best practices for programming
@@ -39,6 +46,4 @@
 * perseverance
 * not math sense, per se
 
-# "Pythonic"
-* writing code in a way that experienced Python programmers would write it
-* idiomatic
+
