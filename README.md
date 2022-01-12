@@ -38,11 +38,11 @@ Project Manager: sabrina@developintelligence.com
 
 # Python Types
 * Immutable vs. Mutable Types
-  * mutable:
+  * mutable: list
   * immutable: strings
 * simple types (scalars) vs. containers
   * simple types: int, float, bool
-  * containers: str
+  * containers: str, list
 
 # What tools/skills do I need to be a good programmer?
 * good problems-solving skills
