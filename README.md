@@ -34,9 +34,11 @@ Project Manager: sabrina@developintelligence.com
  * According to DWS: You need "mechanical sympathy" to excel at programming or a programming language
    * Jackie Stewart
 
-# Python "truthiness"
-* any nonzero number is True (0, 0.0 are False)
-* a nonempty string is True (empty string is False)
+# Important things about Python
+* "truthiness"
+  * any nonzero number is True (0, 0.0 are False)
+  * a nonempty container is True (empty container is False)
+* Python is "Duck Typed"
 
 # Python Types
 * Immutable vs. Mutable Types
