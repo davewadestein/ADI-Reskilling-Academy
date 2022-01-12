@@ -1,6 +1,14 @@
-### Binder link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
+# How to follow along...
 
-### Google Colaboratory link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Introduction%20to%20Programming.ipynb
+## In the cloud...
+* __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
+* __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Introduction%20to%20Programming.ipynb
+
+# or locally on your machine...
+* install Visual Studio Code (https://code.visualstudio.com/)
+* install Anaconda (600+ MB) (https://www.anaconda.com/)
+* install Python (www.python.org) + install Jupyter
+   * on Windows, probably __`pip install jupyterlab`__ from a DOS/command window
 
 Project Manager: sabrina@developintelligence.com
 - reach out to her for any concerns/issues/recordings
