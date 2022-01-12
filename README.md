@@ -1,5 +1,8 @@
 ### Binder link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
 
+Project Manager: sabrina@developintelligence.com
+- reach out to her for any concerns/issues/recordings
+
 # Some Terminology
 * "Pythonic"
   * a coding style that leverages Python's unique features to write code that is readable and beautiful.
