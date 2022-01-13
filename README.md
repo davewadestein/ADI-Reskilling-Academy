@@ -43,12 +43,16 @@ My email: dave@developintelligence.com
  * DRY = Don't Repeat Yourself
  * According to DWS: You need "mechanical sympathy" to excel at programming or a programming language
    * Jackie Stewart
+ * "Performance doesn't matter until it matters, and it rarely matters." –DWS
 
 # Important things about Python
 * "truthiness"
   * any nonzero number is True (0, 0.0 are False)
   * a nonempty container is True (empty container is False)
 * Python is "Duck Typed"
+* built-in functions cannot change ("mutate") objects (e.g., _sorted()_)
+  * corollary 1: in order to change an object you need a method (e.g., _.append()_ ... "mutator")
+  * corollary 2: not all methods change their objects (e.g., _.count()_ ... "inspector")
 
 # Python Types
 * Immutable vs. Mutable Types
@@ -56,7 +60,7 @@ My email: dave@developintelligence.com
   * immutable: strings
 * simple types (scalars) vs. containers
   * simple types: int, float, bool
-  * containers: str, list
+  * containers: str, list, dict
 
 # Walrus Operator
   * add this
