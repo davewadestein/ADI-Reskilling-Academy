@@ -13,6 +13,8 @@
 Project Manager: sabrina@developintelligence.com
 - reach out to her for any concerns/issues/recordings
 
+My email: dave@developintelligence.com
+
 # Some Terminology
 * "Pythonic"
   * a coding style that leverages Python's unique features to write code that is readable and beautiful.
