@@ -61,6 +61,9 @@ My email: dave@developintelligence.com
 * simple types (scalars) vs. containers
   * simple types: int, float, bool
   * containers: str, list, dict
+* iterables are things we can iterate through
+  * e.g., containers
+  * and files
 
 # Walrus Operator
   * add this
