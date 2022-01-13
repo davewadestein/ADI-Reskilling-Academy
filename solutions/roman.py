@@ -19,7 +19,7 @@ roman_to_arabic = {
 # 5. for each number in the list
 # 6. if the number is less than the neighbor (i.e, number to the right), then
 # 7. make that number negative
-# then we have... [1000, -100, 1000, -10, -1, 10] = 1999
+# then we have... [1000, -100, 1000, -10, 100, -1, 10] = 1999
 
 arabic_vals = [] # list to hold Arabic values of each digit
 
