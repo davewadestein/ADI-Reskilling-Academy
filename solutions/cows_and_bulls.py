@@ -42,7 +42,7 @@ def is_valid_guess(guess):
     '''
 
     # step 3
-    if not no_repeated_letters():
+    if has_repeated_letters():
         print('You guess has repeated digits! Try again.')
         return False
 
