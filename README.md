@@ -2,8 +2,8 @@
 
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
-* __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Introduction%20to%20Programming.ipynb
-
+* __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Python%20Fundamentals%20Day%201.ipynb
+* 
 # or locally on your machine...
 * install Visual Studio Code (https://code.visualstudio.com/)
 * install Anaconda (600+ MB) (https://www.anaconda.com/)
