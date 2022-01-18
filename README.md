@@ -46,6 +46,8 @@ My email: dave@developintelligence.com
  * "Performance doesn't matter until it matters, and it rarely matters." –DWS
 
 # Important things about Python
+* everything in Python is an object
+  * every object lives in memory and we can inspect it
 * "truthiness"
   * any nonzero number is True (0, 0.0 are False)
   * a nonempty container is True (empty container is False)
