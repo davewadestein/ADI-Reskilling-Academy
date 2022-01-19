@@ -81,8 +81,8 @@ My email: dave@developintelligence.com
 
 # Python Types
 * Immutable vs. Mutable Types
-  * mutable: list
-  * immutable: strings
+  * mutable: list, dict
+  * immutable: strings, tuples
 * simple types (scalars) vs. containers
   * simple types: int, float, bool
   * containers: str, list, dict
