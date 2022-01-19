@@ -9,6 +9,29 @@
 * install Anaconda (600+ MB) (https://www.anaconda.com/)
 * install Python (www.python.org) + install Jupyter
    * on Windows, probably __`pip install jupyterlab`__ from a DOS/command window
+* some troubleshooting notes re: installing on Windows courtesy of Trevor:
+ 1. First ensure that your windows machine has a copy of Python. I got mine right from the Microsoft Store.
+ 2. From here you need only to run the following code within the command line (windows+R cmd) to install
+
+					pip install jupyterlab
+					
+ 3. According to Jupyter Lab, to run the program after the installation you run the following code from command line (this did not work for me...)
+	
+					jupyter-lab
+					
+						or
+						
+					python -m notebook
+					
+ 4. If step 2 did not work for you, verify that the python.exe file is a user variable. Run the following code in command line and copy the PATH that is output
+					
+					where.exe python
+				
+ 5. Press the windows key and enter "environment variables". From the "Advanced" tab within the "System Properties" window, click "Environment Variables"
+
+ 6. From the new "Environment Variables" window, click the New user variable button and enter the following. Be sure to click "OK" when closing windows after entering info
+
+					Variable Name: python
 
 Project Manager: sabrina@developintelligence.com
 - reach out to her for any concerns/issues/recordings
