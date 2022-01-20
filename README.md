@@ -74,6 +74,7 @@ My email: dave@developintelligence.com
 * "truthiness"
   * any nonzero number is True (0, 0.0 are False)
   * a nonempty container is True (empty container is False)
+  * None is treated like False
 * Python is "Duck Typed"
 * built-in functions cannot change ("mutate") objects (e.g., _sorted()_)
   * corollary 1: in order to change an object you need a method (e.g., _.append()_ ... "mutator")
