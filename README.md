@@ -1,5 +1,7 @@
 # How to follow along...
 
+#### Survey, week 2: https://www.surveymonkey.com/r/ADIWeek2Wade-Stein
+
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
 * __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Python%20Fundamentals%20Day%201.ipynb
@@ -100,5 +102,8 @@ My email: dave@developintelligence.com
   * methodical / attention to detail
 * perseverance
 * not math sense, per se
+* common errors to be aware of: off-by-one
+  * the three banes of existence for programmers are: uninitialized variables and off-by-one errors
+
 
 
