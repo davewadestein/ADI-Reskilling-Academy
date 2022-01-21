@@ -92,6 +92,9 @@ My email: dave@developintelligence.com
 * iterables are things we can iterate through
   * e.g., containers
   * and files
+* str() always works-every object has a string representtion
+* bool() always works
+* int() and float() only work if the object passed in can be converted
 
 # Walrus Operator
   * add this
