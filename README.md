@@ -108,5 +108,7 @@ My email: dave@developintelligence.com
 * common errors to be aware of: off-by-one
   * the three banes of existence for programmers are: uninitialized variables and off-by-one errors
 
-
-
+# Books you may want to consider
+  * Introducing Python by Bill Lubanovic (beginner)
+  * Fluent Python by Luciano Ramalho (intermediate)
+  * 
