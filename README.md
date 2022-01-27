@@ -116,4 +116,8 @@ My email: dave@developintelligence.com
   * If you want to write tests in Python to test C Code: 
 https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit%20tests,in%20C%20(or%20C%2B%2B).&text=It%20will%20also%20cover%20creating,test%20to%20hide%20external%20dependencies.
   * If you want to control your instruments with Python: https://pyvisa.readthedocs.io/en/latest/ (https://pypi.org/project/PyVISA/)
-  * 
+  
+# Linux
+* https://docs.microsoft.com/en-us/windows/wsl/about
+* http://repl.it
+* Git bash (https://git-scm.com/downloads)
