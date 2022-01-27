@@ -11,6 +11,16 @@
 * install Anaconda (600+ MB) (https://www.anaconda.com/)
 * install Python (www.python.org) + install Jupyter
    * on Windows, probably __`pip install jupyterlab`__ from a DOS/command window
+* once Python is installed you need to install __`pytest`__
+   * at a command prompt, do these things:
+      * type __`pip install pytest`__
+      * (you may see a warning at the end if the install suggesting you add a folder to your PATH)
+      * you should add that folder to the path by hitting the Windows key and typing __`env`__ into your Windows search bar
+      * once you've added to the path, reboot your computer
+      * then go to command window and type __`where pytest`__ and it should respond with a folder rather than a error
+      * at that point you should be able to create a new folder into which you'll end up putting Python code, and once inside that folder, even if it's empty, you shoud be able to run __`pytest`__
+      * if any problems, ask...
+   
 * some troubleshooting notes re: installing on Windows courtesy of Trevor:
  1. First ensure that your windows machine has a copy of Python. I got mine right from the Microsoft Store.
  2. From here you need only to run the following code within the command line (windows+R cmd) to install
