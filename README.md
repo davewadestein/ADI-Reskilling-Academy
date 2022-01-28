@@ -1,6 +1,6 @@
 # How to follow along...
 
-#### Survey, week 2: https://www.surveymonkey.com/r/ADIWeek2Wade-Stein
+#### Survey, week 3: https://www.surveymonkey.com/r/ADIWeek3Wade-Stein
 
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
