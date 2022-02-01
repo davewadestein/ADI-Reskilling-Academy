@@ -7,6 +7,9 @@
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
 * https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
 
+## Git on Pluralsight
+ * Paolo Perrotta
+ 
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
 * __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Python%20Fundamentals%20Day%201.ipynb
