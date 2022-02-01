@@ -2,10 +2,15 @@
 
 #### Survey, week 3: https://www.surveymonkey.com/r/ADIWeek3Wade-Stein
 
+## Local git setup
+* Install git from https://git-scm.com/download/win ("git bash")
+* You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
+* https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
+
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Learn-to-Code/HEAD
 * __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Python%20Fundamentals%20Day%201.ipynb
-* 
+
 # or locally on your machine...
 * install Visual Studio Code (https://code.visualstudio.com/)
 * install Anaconda (600+ MB) (https://www.anaconda.com/)
