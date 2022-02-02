@@ -1,6 +1,6 @@
 # How to follow along...
 
-#### Survey, week 3: https://www.surveymonkey.com/r/ADIWeek3Wade-Stein
+## When I make this change, you won't see it until you pull.
 
 ## Local git setup
 * Install git from https://git-scm.com/download/win ("git bash")
