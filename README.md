@@ -1,8 +1,5 @@
 # How to follow along...
 
-## When I make this change, you won't see it until you pull.
-### Here is another change
-
 ## Local git setup
 * Install git from https://git-scm.com/download/win ("git bash")
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
