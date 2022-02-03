@@ -1,4 +1,4 @@
-## Part 1: Basic operations
+## EXAPUNKS Part 1: Basic operations
 
 ### Instructions
 
