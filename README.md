@@ -5,6 +5,8 @@
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
 * https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
 
+## other section
+
 ## Git on Pluralsight
  * Paolo Perrotta
  
