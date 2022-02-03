@@ -46,6 +46,8 @@ abbreviations will be used to represent required operands:
 ### You will be coding this along with a partner, one part at a time.
 ### DO NOT ATTEMPT A PART UNTIL YOU'VE COMPLETED THE PREVIOUS PART!
 
-Go to [Part 1]
-
-[Part 1]: https://github.com/davewadestein/ADI-Learn-to-Code/new/main/projects
+[Part 1](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-1.md)
+[Part 2](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-2.md)
+[Part 3](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-3.md)
+[Part 4](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-4.md)
+[Bonus](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Bonus.md)
