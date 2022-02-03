@@ -5,3 +5,4 @@
   * rock smashes scissors
   * scissors cuts paper
   * paper covers rock
+  *        
