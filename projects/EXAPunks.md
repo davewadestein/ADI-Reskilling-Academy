@@ -53,5 +53,3 @@ abbreviations will be used to represent required operands:
 [Part 3](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-3.md)
 
 [Part 4](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Part-4.md)
-
-[Bonus](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPunks-Bonus.md)
