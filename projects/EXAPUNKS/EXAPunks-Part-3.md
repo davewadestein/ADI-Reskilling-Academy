@@ -52,3 +52,5 @@ of your choice? It doesn't need to output the number of steps or anything, for
 now try to implement a program that goes through the sequence until it ends.
 
 [Collatz conjecture]: https://en.wikipedia.org/wiki/Collatz_conjecture
+
+[Part 4](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPUNKS/EXAPunks-Part-4.md)
