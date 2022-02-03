@@ -28,3 +28,5 @@ This will:
 6. Finally, test if `T` is smaller than 1. This is false, so `T` is set to 0.
 
 So far it might not look very useful, but the next part will fix that.
+
+[Part 3](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPUNKS/EXAPunks-Part-3.md)
