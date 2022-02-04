@@ -1,6 +1,10 @@
 # Week 4 Survey
 * https://www.surveymonkey.com/r/ADIWeek4Wade-Stein
 
+# TO DO: 
+* Add notebooks intermediate class
+* add solutions exapunks
+
 # How to follow along...
 
 ## Local git setup
@@ -58,6 +62,9 @@ Project Manager: sabrina@developintelligence.com
 - reach out to her for any concerns/issues/recordings
 
 My email: dave@developintelligence.com
+
+www.developintelligence.com
+
 
 # Some Terminology
 * "Pythonic"
