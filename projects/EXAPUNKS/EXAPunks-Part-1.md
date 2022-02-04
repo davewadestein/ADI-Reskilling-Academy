@@ -104,3 +104,15 @@ What are the values of the registers at the end? As a bonus, can you identify
 what operation the last five instructions are effectively doing?
 
 [Part 2](https://github.com/davewadestein/ADI-Learn-to-Code/blob/main/projects/EXAPUNKS/EXAPunks-Part-2.md)
+
+## Thoughts on algorithm
+* read the file a line at a time
+* skip if empty line
+* validate the command (first word on the line...COPY, ADDI, etc.)
+  * if word is not in my list of valid commands then bail out
+  * import sys ... sys.exit(1) # terminate the program
+  * otherwise, it's valid and COPY is the odd one out (takes 2 arguments vs. 3 arguments)
+  * count the number of arguments on the line and be sure it's 3 or 4 as needed
+    * if not correct, then bail out
+
+valid_commands = 'COPY ADDI ...'.split() # this could be a tuple or some other container
