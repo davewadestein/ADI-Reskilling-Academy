@@ -1,11 +1,12 @@
+# Week 4 Survey
+* https://www.surveymonkey.com/r/ADIWeek4Wade-Stein
+
 # How to follow along...
 
 ## Local git setup
 * Install git from https://git-scm.com/download/win ("git bash")
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
 * https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
-
-## other section
 
 ## Git on Pluralsight
  * Paolo Perrotta
