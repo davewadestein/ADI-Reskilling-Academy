@@ -7,19 +7,18 @@ features and instructions of the language.
 
 (When you see __R/N__ below, it means that you can put a _register_ or a _number_ there.)
 
-* `COPY R/N R`  
-  Copy the value of the first operand into the second operand.
-* `ADDI R/N R/N R`  
-  Add the value of the first operand to the value of the second operand and
-  store the result in the third operand.
-* `SUBI R/N R/N R`  
-  Same as `ADDI`, for substraction.
-* `MULI R/N R/N R`  
-  Same as `ADDI`, for multiplication.
-* `DIVI R/N R/N R`  
-  Same as `ADDI`, for integral division.
-* `MODI R/N R/N R`  
-  Same as `ADDI`, for modulo.
+* __`COPY R/N R`__
+<br>Copy the value of the first operand into the second operand.
+* __`ADDI R/N R/N R`__ 
+<br>Add the value of the first operand to the value of the second operand and store the result in the third operand.
+* __`SUBI R/N R/N R`__
+<br>Same as `ADDI`, for substraction.
+* __`MULI R/N R/N R`__  
+Same as `ADDI`, for multiplication.
+* __`DIVI R/N R/N R`__  
+Same as `ADDI`, for integral division.
+* __`MODI R/N R/N R`__  
+Same as `ADDI`, for modulo.
   
 As you can see, all of the above operations put their result into a _register_, but the
 operands can be either registers or numbers.
