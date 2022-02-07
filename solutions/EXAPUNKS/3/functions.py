@@ -1,6 +1,7 @@
 """This module contains implementations of the EXA functions."""
 
 import registers
+import labels
 
 def COPY(src, dest):
     """Copy the value of the src operand into the dest operand.
@@ -50,42 +51,3 @@ def MODI(op1, op2, dest):
     Syntax: R/N R/N R
     """
     registers.set(dest, registers.get_operand_val(op1) % registers.get_operand_val(op2))
-
-
-def TEST(op1, tester=None, op2=None):
-    """
-    Compare value of first operand to the value of second operand.
-    If equal, set T register to 1, otherwise set the T register to 0.
-    The same syntax is used for the < (less than) and > (greater than) tests.
-
-    Syntax: TEST R/N = R/N
-    Also:   TEST EOF to check if at end of file
-    """
-
-    if op1 == "EOF":
-        result = file.is_current_file_at_eof()
-    else:
-        import operator
-
-        op_mapper = {
-            "=": operator.eq,
-            ">": operator.gt,
-            "<": operator.lt,
-        }
-        result = op_mapper[tester](
-            registers.get_operand_val(op1), registers.get_operand_val(op2)
-        )
-
-    registers.set("T", int(result))
-
-
-"""Map instructions to the functions that implements it."""
-func_mapper = {
-    "COPY": COPY,
-    "ADDI": ADDI,
-    "MULI": MULI,
-    "SUBI": SUBI,
-    "DIVI": DIVI,
-    "MODI": MODI,
-    "TEST": TEST,
-}
