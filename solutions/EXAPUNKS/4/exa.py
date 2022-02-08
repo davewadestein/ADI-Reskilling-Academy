@@ -18,7 +18,7 @@ def parse(codefile):
     """Read entire file using readlines(), which is technically unsafe, as file
     could be HUGE. Strip whitespace and discard blank lines while we're at it."""
     with file:
-        code = [line.strip().split() for line in file.readlines() if len(line) > 1]
+        code = [line.strip().split() for line in files.readlines() if len(line) > 1]
 
     return code
 

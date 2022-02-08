@@ -41,7 +41,7 @@ def ensure_valid_file(file_id):
 def is_current_file_at_eof():
     """Return True if file is at EOF"""
     ensure_file_is_open()
-    
+
     return file_cursor >= len(files[current_file])
 
 
@@ -88,6 +88,6 @@ def SEEK(position):
     if position == -registers.MAX_NUM:
         position = 0
     elif position == registers.MAX_NUM:
-        position = end_of_current_file()
+        position = len(files[current_file])
 
     file_cursor = position

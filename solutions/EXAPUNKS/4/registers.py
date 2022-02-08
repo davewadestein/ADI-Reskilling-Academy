@@ -2,7 +2,7 @@
 to inspect registers.
 """
 
-import file
+import files
 
 MAX_NUM = 9999
 
@@ -30,7 +30,7 @@ def validate_register(name):
     """
     if not is_register(name):
         raise Exception(f'Illegal Register Name: {name}')
-    if name == "F" and not file.is_open():
+    if name == "F" and not files.is_open():
         raise Exception('Invalid F register access: File not open!')
 
 
@@ -43,7 +43,7 @@ def get(name):
     validate_register(name)
 
     if name == "F":
-        registers[name] = file.read_value_from_file()
+        registers[name] = files.read_value_from_file()
     return registers[name]
 
 
@@ -56,7 +56,7 @@ def set(name, val):
     validate_register(name)
 
     if name == "F":
-        file.write_value_to_file(val)
+        files.write_value_to_file(val)
     registers[name] = val
 
 
@@ -84,6 +84,7 @@ def get_operand_val(arg):
         return get(arg)
     return get_valid_int(arg)
 
+
 def TEST(op1, tester=None, op2=None):
     """
     Compare value of first operand to the value of second operand.
@@ -95,7 +96,7 @@ def TEST(op1, tester=None, op2=None):
     """
 
     if op1 == "EOF":
-        result = file.is_current_file_at_eof()
+        result = files.is_current_file_at_eof()
     else:
         import operator
 

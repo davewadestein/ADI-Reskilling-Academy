@@ -1,12 +1,21 @@
 import registers
 import functions
 import labels
-import file
+import files
 
 # Global vars...not the greatest form, but easier than passing them all around.
 command = ""            # command
 args = ()               # arguments to the command
 instruction_ptr = 0     # instruction_ptr
+
+
+def get_instruction_ptr():
+    return instruction_ptr
+
+
+def set_instruction_ptr(val):
+    global instruction_ptr
+    instruction_ptr = val
 
 
 def print_state(code):
@@ -19,7 +28,7 @@ def print_state(code):
         print("...NOOP...")
     else:
         registers.print_registers()
-        file.print_file_info()
+        files.print_file_info()
 
     if instruction_ptr < len(code):
         print(f"Next instruction: ({instruction_ptr}) {code[instruction_ptr]}")
@@ -66,7 +75,7 @@ def run_code(code):
         instruction_ptr += 1
 
     print_state(code)
-    file.print_final_value_of_files()
+    files.print_final_value_of_files()
 
 
 """Jump commands possibly move the file pointer and therefore are here with the
@@ -77,27 +86,21 @@ functions so we don't want these there.
 def TJMP(label):
     """Jump if TRUE. Return new position of instruction pointer or None if no
     movement is desired."""
-    global instruction_ptr
-
     if registers.get("T") != 0:
-        instruction_ptr = labels.get_label(label)
+        set_instruction_ptr(labels.get_label(label))
 
 
 # Should be same func as above, just change sense of test
 def FJMP(label):
     """Jump if FALSE. Return new position of instruction pointer or None if no
     movement is desired."""
-    global instruction_ptr
-
     if registers.get("T") == 0:
-        instruction_ptr = labels.get_label(label)
+        set_instruction_ptr(labels.get_label(label))
 
 
 def JUMP(label):
     """Unconditional jump."""
-    global instruction_ptr
-
-    instruction_ptr = labels.get_label(label)
+    set_instruction_ptr(labels.get_label(label))
 
 
 # Map instructions to a sequence of one or more functions that should be called.
@@ -115,7 +118,7 @@ func_mapper = {
     "TJMP": (labels.ensure_valid_label, TJMP),
     "FJMP": (labels.ensure_valid_label, FJMP),
     "JUMP": (labels.ensure_valid_label, JUMP),
-    "GRAB": (file.ensure_valid_file, file.GRAB),
-    "DROP": (file.DROP,),
-    "SEEK": (file.SEEK,),
+    "GRAB": (files.ensure_valid_file, files.GRAB),
+    "DROP": (files.DROP,),
+    "SEEK": (files.SEEK,),
 }
