@@ -7,6 +7,11 @@
 # or locally on your machine...
 * install Visual Studio Code (https://code.visualstudio.com/)
 * install Anaconda (600+ MB) (https://www.anaconda.com/)
+  * download and install (right-click and elevate permissions)
+  * choose the defaults
+  * Jupyter will be in your Start Menu
+  * Anaconda Navigator is in the Start Menu but you need to "pin it" if you want it over and over...
+  * JupyterLab is the equivalent of Binder up the in cloud
 * install Python (www.python.org) + install Jupyter
    * on Windows, probably __`pip install jupyterlab`__ from a DOS/command window
 * once Python is installed you need to install __`pytest`__
