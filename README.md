@@ -1,10 +1,3 @@
-# Week 4 Survey
-* https://www.surveymonkey.com/r/ADIWeek4Wade-Stein
-
-# TO DO: 
-* Add notebooks intermediate class
-* add solutions exapunks
-
 # How to follow along...
 
 ## Local git setup
