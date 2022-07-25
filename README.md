@@ -27,6 +27,7 @@
 ## Git on Pluralsight
  * Paolo Perrotta
 
+## Installing Jupyter and Python locally
 * some troubleshooting notes re: installing on Windows courtesy of former students:
  1. First ensure that your windows machine has a copy of Python. I got mine right from the Microsoft Store.
  2. From here you need only to run the following code within the command line (windows+R cmd) to install
