@@ -2,7 +2,7 @@
 
 ## In the cloud...
 * __Binder__ link: https://mybinder.org/v2/gh/davewadestein/ADI-Reskilling-Academy/HEAD
-* __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Learn-to-Code/blob/main/Python%20Fundamentals%20Day%201.ipynb
+* __Google Colaboratory__ link: https://colab.research.google.com/github/davewadestein/ADI-Reskilling-Academy/
 
 # or locally on your machine...
 * install Visual Studio Code (https://code.visualstudio.com/)
