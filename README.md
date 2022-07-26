@@ -1,3 +1,8 @@
+# How to reach me...
+
+My email: dave@developintelligence.com
+Slack channel: TBA
+
 # How to follow along...
 
 ## In the cloud...
@@ -66,7 +71,6 @@
 Project Manager: sabrina@developintelligence.com
 - reach out to her for any concerns/issues/recordings
 
-My email: dave@developintelligence.com
 
 
 # What tools/skills do I need to be a good programmer?
