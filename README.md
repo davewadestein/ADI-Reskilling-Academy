@@ -1,7 +1,8 @@
 # How to reach me...
 
 My email: dave@developintelligence.com
-Slack channel: TBA
+
+Slack channel: sw-reskill-class2 (search for this channel in the global options)
 
 # How to follow along...
 
