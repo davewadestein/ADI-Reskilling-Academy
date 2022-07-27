@@ -4,6 +4,8 @@ My email: dave@developintelligence.com
 
 Slack channel: sw-reskill-class2 (search for this channel in the global options)
 
+Slack URL: https://analog.enterprise.slack.com/
+
 # How to follow along...
 
 ## In the cloud...
