@@ -22,6 +22,8 @@ Slack channel: TBA
   * troubleshooting Anaconda
     * if JupyterLab will not open, note this from Kevin Goodspeed:
        > To Launch JupyterLab from Anaconda requires Running as Administrator or Run Elevated.  I got the same error, and solved it by going to C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Anaconda3 (64-bit), right-clicking on 'Anaconda Navigator (Anaconda3)' and selecting Run as Administrator.
+       * Matt added this clarification–if you are running "elevated" you simply need to enter your password, but if you are running as
+       administrator, you have to enter your username, which is different from your email address.
 * or if you are a glutton for punishment, do this:
   * install Python (www.python.org) + install Jupyter
   * on Windows, probably __`pip install jupyterlab`__ from a DOS/command window
