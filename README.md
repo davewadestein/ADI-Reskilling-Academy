@@ -6,6 +6,8 @@ Slack channel: sw-reskill-class2 (search for this channel in the global options)
 
 Slack URL: https://analog.enterprise.slack.com/
 
+Week 1 Evaluation: https://www.surveymonkey.com/r/ADI_Week1_DWS
+
 # How to follow along...
 
 ## In the cloud...
@@ -42,7 +44,12 @@ Slack URL: https://analog.enterprise.slack.com/
       * then go to command window and type __`where pytest`__ and it should respond with a folder rather than a error
       * at that point you should be able to create a new folder into which you'll end up putting Python code, and once inside that folder, even if it's empty, you shoud be able to run __`pytest`__
       * if any problems, ask...
-      
+   
+## Useful Python resources
+* https://www.pythoncheatsheet.org/
+* https://pythontutor.com/
+* Python cheat sheet [http://sixthresearcher.com/wp-content/uploads/2016/12/Python3_reference_cheat_sheet.pdf]
+
 ## Local git setup
 * Install git from https://git-scm.com/download/win ("git bash")
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
