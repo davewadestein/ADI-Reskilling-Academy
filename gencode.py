@@ -4,6 +4,11 @@ def generate_secret_code(num_digits=4, **kwargs):
     """
     from random import choice as random_choice # we are free to rename imports to suit our mood
     
+    try:
+        num_digits = int(num_digits)
+    except ValueError as original_exception:
+        raise TypeError('generate_secret_code(): Expected int or int-ifiable argument' + '\noriginal error: ' + str(original_exception))
+    
     debug = kwargs.get('debug') # this will be None if not there or the value if it is there
     allow_dupes = kwargs.get('allow_dupes')
     
@@ -20,8 +25,7 @@ def generate_secret_code(num_digits=4, **kwargs):
     
     # this is not the ideal way to handle such errors, but it's a way...
     if num_digits < 2 or num_digits > 10:
-        print('number of digits must be between 2 and 10')
-        return secret_code
+        raise ValueError('number of digits in code must be between 2 and 10')
     
     if debug:
         print(f'Generating a {num_digits}-digit secret code...')
@@ -41,5 +45,20 @@ def generate_secret_code(num_digits=4, **kwargs):
 
 import sys # gives us access to command-line arguments (argv)
 # sys.argv is going to look like ['script.py']
+
 print(sys.argv)
-print(generate_secret_code())
+
+if len(sys.argv) > 1: # this means >= 1 command-line args
+    # ['gencode.py', '4']
+    args_to_pass = {}
+    if '-d' in sys.argv: # has -d been passed as a command-line arg
+        args_to_pass['debug'] = True
+        sys.argv.remove('-d')
+    if '-a' in sys.argv: # has -a been passed as a command-line arg
+        args_to_pass['allow_dupes'] = True
+        sys.argv.remove('-a')
+    
+    sys.argv.append('4') # now sys.argv has at least 2 items in it .. [0] and [1]
+    print(generate_secret_code(sys.argv[1], **args_to_pass))
+else:
+    print(generate_secret_code()) # call it w/no params, so use defaults
