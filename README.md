@@ -113,3 +113,36 @@ https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit
 * http://repl.it
 * Git bash (https://git-scm.com/downloads)
   * not Linux, but rather, a Bash clone that lets you run some Linux-like commands
+
+
+# "Group" programming assignment
+1. add a "store game" feature to Chutes and Ladders
+* when you quit, you have the option to save the game
+  * save whose turn it is and the player names and positions
+  * player whose turn it is is first line
+  * subsequent lines are player and position, e.g.,
+  > Grace<br>
+  > Dave 55<br>
+  > Carlos 41<br>
+  > Grace 65
+  * you might consider a special extension (other than .txt), e.g., .chute
+* when you start the game, you may choose to enter a filename with content such as the above
+  * if contents are valid, restore the game and continue
+  * if not valid, tell user!
+    * Simon's suggestion: some code or word or phrase like "chutes_and_ladder_stored_games" at the top
+  
+* e.g., Cows and Bulls
+  * what to store?
+    * secret code
+    * guesses so far / responses (or recreate them)
+    * Balbir suggestion: store the guesses and the responses together in a dict
+  * what to change in this program?
+    * how many digits in the code? (if we didn't ask that, add it) / maybe have the restore function here
+    * when you quit, perhas 'q' for 'quit' and 's' for 'save'
+  * how to do this?
+    * functions!
+    * test them 
+1. Make some new functions for some of the main program code
+1. let a player quit independent of the game
+1. let a new player take over for an existing player
+1. etc.
