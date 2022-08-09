@@ -146,3 +146,6 @@ https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit
 1. let a player quit independent of the game
 1. let a new player take over for an existing player
 1. etc.
+
+* Latest Chutes & Ladders: https://dpaste.com/ETETCKGSG
+* Latest Cows & Bulls: https://dpaste.com/8CWFGTZCZ
