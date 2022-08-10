@@ -175,3 +175,5 @@ https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit
 * player with higher hand wins
 * 21 is a "blackjack"
 * hands over 21 are a "bust" and the other player wins
+* you can get Unicode suit symbols like this:
+  `suits = '\u2663 \u2662 \u2661 \u2660'.split()`
