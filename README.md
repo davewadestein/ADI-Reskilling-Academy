@@ -147,5 +147,29 @@ https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit
 1. let a new player take over for an existing player
 1. etc.
 
-* Latest Chutes & Ladders: https://dpaste.com/ETETCKGSG
-* Latest Cows & Bulls: https://dpaste.com/8CWFGTZCZ
+# 2nd "Group" Project Options
+* The Monty Hall Problem
+	* https://en.wikipedia.org/wiki/Monty_Hall_problem
+	* The goal is to simulate it. In other words, pick a random door behind which the “car” is hidden, then pick a random door that represents the choice made by the contestant, then have the contestant switch to the other door. Ask how many times to run this simulation and you should see it converging on a 66.67% probability that the contestant wins the car by switching. These are the only two possible scenarios:
+	  1. contestant picks car on first try, Monty Hall reveals a goat behind one of the remaining doors, contestant switches to final remaining door, and loses
+	  1. contestant does not pick car on first try, Monty Hall reveals a goat behind one of the remaining doors, contestant switches to final remaining door, and wins
+	* Your simulation should show that #1 happens 1/3 of the time (because with 3 doors, there is a 1/3 chance of picking the car on the first choice), and that #2 happens 2/3 of the time.
+	* Let the user enter the number of doors, so as the number of doors increases, the benefit from switching increases. As an example, consider how it would work with 100 doors. Contest picks a door, Monty Hall shows the contestant that nothing of value is behind 98 of the other doors, and then asks if contestant wants to stick with original choice or switch to the one remaining door. In this example, the contestant clearly had a 1/100 chance of getting car on first try, but if contestant switches, there is a 99/100 chance the car will be behind the remaining door. So your simulation should show that with 100 doors, the benefit from switching occurs 99% of the time.
+* Roshambo / Rock-Scissors-Paper
+  * play against the computer
+  * you pick one of Rock / Scissors / Paper
+  * computer picks one
+  * compare
+     * paper cover rocks (paper wins)
+     * rock smashes scissors (rock wins)
+     * scissors cuts paper (scissors wins)
+* Blackjack against the computer / players
+  * each player gets 2 cards
+  * J, Q, K all count as 10
+  * A counts as 11 (or 1 and if you can deal with this complication, try)
+  * number cards count as the number (2..10)
+  * try to get 21
+  * player can "hit" (take another card) or "stand" (no more cards)
+  * if > 21, then "bust"
+  * dealer must hit on 16 (or less), and stand on 17 (or more)
+  * count_points_in_hand, deal_cards, hit()ß
