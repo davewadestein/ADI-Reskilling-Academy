@@ -163,13 +163,15 @@ https://av.tib.eu/media/21089#:~:text=Alexander%20Steffen%20%2D%20Writing%20unit
      * paper cover rocks (paper wins)
      * rock smashes scissors (rock wins)
      * scissors cuts paper (scissors wins)
-* Blackjack against the computer / players
-  * each player gets 2 cards
-  * J, Q, K all count as 10
-  * A counts as 11 (or 1 and if you can deal with this complication, try)
-  * number cards count as the number (2..10)
-  * try to get 21
-  * player can "hit" (take another card) or "stand" (no more cards)
-  * if > 21, then "bust"
-  * dealer must hit on 16 (or less), and stand on 17 (or more)
-  * count_points_in_hand, deal_cards, hit()ß
+
+# Blackjack
+* computer deals 2 cards to each player
+* the rank of the cards is all that matter, suits are ignored
+* J, Q, K count as 10
+* A counts as 1 or 11 (don't worry about this at first)
+* the value of a hand is the total of all the cards, e.g., 4 and K total 14, A and 5 total 16 (or 6)
+* player can "hit" (ask for another card) or "stand"
+* dealer must hit on a hand below 17 and stand on 17+
+* player with higher hand wins
+* 21 is a "blackjack"
+* hands over 21 are a "bust" and the other player wins
