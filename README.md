@@ -58,6 +58,10 @@ Sabrina Devitt (sabrina@developintelligence.com)
 * You may want to install Notepad++ if you don't have it (https://notepad-plus-plus.org/downloads/)
 * https://docs.github.com/en/get-started/getting-started-with-git/associating-text-editors-with-git
 
+## Git resources on the web
+* https://git-school.github.io/visualizing-git/
+* https://learngitbranching.js.org/
+* 
 ## Git on Pluralsight
  * Paolo Perrotta
 
