@@ -1,3 +1,6 @@
+# Week 4 survey link
+https://www.surveymonkey.com/r/ADI_Week4_DWS
+
 # How to reach me (or others)
 
 My email: dave@developintelligence.com
@@ -5,8 +8,6 @@ My email: dave@developintelligence.com
 Slack channel: sw-reskill-class2 (search for this channel in the global options)
 
 Slack URL: https://analog.enterprise.slack.com/
-
-Week 1 Evaluation: https://www.surveymonkey.com/r/ADI_Week1_DWS
 
 Sabrina Devitt (sabrina@developintelligence.com)
 
