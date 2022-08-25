@@ -1,6 +1,11 @@
 
 # EXAPUNKS Emulator (Adapted for ADI Learn to Code project)
 
+* Notes
+* sys.exit(1) is a way of bailing out
+* another way is raise ValueError('bad register') or Exception('unknown instruction')
+* don't stress too much over validation
+
 ## Introduction
 
 [EXAPUNKS] is a 2018 video game by Zachtronics. It is set in a cyberpunk past
