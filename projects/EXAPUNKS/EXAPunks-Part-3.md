@@ -8,7 +8,7 @@ flow control instrustions:
 
 * `MARK L`  
   Mark this line with the specified label. `MARK` is a pseudo-instruction and
-  is not executed.
+  is not executed. If this label already exists, then this is an invalid instruction.
 * `JUMP L`  
   Jump to the specified label.
 * `TJMP L`  
