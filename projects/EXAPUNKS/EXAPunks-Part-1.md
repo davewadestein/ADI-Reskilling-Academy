@@ -114,8 +114,8 @@ what operation the last five instructions are effectively doing?
 ## Thoughts on algorithm
 * read the file a line at a time
 * skip if empty line
-* validate the command (first word on the line...COPY, ADDI, etc.)
-  * if word is not in my list of valid commands then bail out
+* validate the instruction (first word on the line...COPY, ADDI, etc.)
+  * if word is not in my list of valid instructions then bail out
   * import sys ... sys.exit(1) # terminate the program
   * otherwise, it's valid and COPY is the odd one out (takes 2 arguments vs. 3 arguments)
   * count the number of arguments on the line and be sure it's 3 or 4 as needed
