@@ -58,7 +58,7 @@ abbreviations will be used to represent required operands:
 0. the entire process should be infused with the idea that we are working together
 1. understand the problem
 2. identify major components (modules) / pseudocode to explain how they communicate 
-3. identify functions to perform the tasks noted in step 2 (possibly stub them out)
+3. identify functions (and how they will work) to perform the tasks noted in step 2 (possibly stub them out)
 4. do TDD per module, group like functions in TDD together (generate test_*.py files)
 5. make tests pass, you can decide who does what
 6. put it all together and run the tests here
