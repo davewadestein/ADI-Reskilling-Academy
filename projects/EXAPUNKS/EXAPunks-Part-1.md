@@ -121,6 +121,7 @@ what operation the last five instructions are effectively doing?
   * count the number of arguments on the line and be sure it's 3 or 4 as needed
     * if not correct, then bail out
 
+```
   valid_commands = 'COPY ADDI ...'.split() # this could be a tuple or some other container
 
   def COPY(arguments): # words[1:], i.e., the slice of the original line which excludes the instruction
@@ -134,7 +135,7 @@ what operation the last five instructions are effectively doing?
       # COPY R/N R
       # How do I know that argument[1] is a Register?
       # COPY(['X', 'FOO'])
-
+      
       # classify each argument as register or number
 
       if we expect a register only and arg not in valid_registers: # [ 'X', 'T' ]
@@ -149,3 +150,4 @@ what operation the last five instructions are effectively doing?
 
       # suppose the command was COPY T X and T has 25 in it right now
       return tuple of the validated args converted to operands... (25, 'X')
+```
