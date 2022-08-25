@@ -59,6 +59,13 @@ instructions and run it.
    detail is that you will need to be careful about whether an argument is a
    number or a register name when both are allowed, and choose the correct
    behavior.
+   
+5. While it's fine to have global variables, for example, for the registers, I
+recommend that you have functions that access those variables so that in other 
+modules (files) you can call those functions to set the registers and get their
+values.
+
+6. I would recommend breaking this up into multiple files (modules).
 
 ### Example
 
