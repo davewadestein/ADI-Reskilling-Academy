@@ -1,13 +1,14 @@
 """This module contains implementations of the EXA functions."""
 
-import registers
+from registers import set_register, get_operand_val
+
 
 def COPY(src, dest):
     """Copy the value of the src operand into the dest operand.
 
     Syntax: COPY R/N R
     """
-    registers.set(dest, registers.get_operand_val(src))
+    set_register(dest, get_operand_val(src))
 
 
 def ADDI(op1, op2, dest):
@@ -15,7 +16,7 @@ def ADDI(op1, op2, dest):
 
     Syntax: ADDI R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) + registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) + get_operand_val(op2))
 
 
 def SUBI(op1, op2, dest):
@@ -23,7 +24,7 @@ def SUBI(op1, op2, dest):
 
     Syntax: SUBI R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) - registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) - get_operand_val(op2))
 
 
 def MULI(op1, op2, dest):
@@ -31,7 +32,7 @@ def MULI(op1, op2, dest):
 
     Syntax: MULI R/N R/N
     """
-    registers.set(dest, registers.get_operand_val(op1) * registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) * get_operand_val(op2))
 
 
 def DIVI(op1, op2, dest):
@@ -39,9 +40,7 @@ def DIVI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(
-        dest, registers.get_operand_val(op1) // registers.get_operand_val(op2)
-    )
+    set_register(dest, get_operand_val(op1) // get_operand_val(op2))
 
 
 def MODI(op1, op2, dest):
@@ -49,10 +48,10 @@ def MODI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) % registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) % get_operand_val(op2))
 
 
-"""Map instructions to the functions that implements it."""
+"""Map each instruction to the function that implements it."""
 func_mapper = {
     "COPY": COPY,
     "ADDI": ADDI,
