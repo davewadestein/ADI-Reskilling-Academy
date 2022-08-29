@@ -5,7 +5,8 @@ import functions
 def print_state(statement):
     """Print out current instruction and value of registers."""
 
-    print(statement)
+    if statement:
+        print(statement)
     registers.print_registers()
 
 
@@ -14,11 +15,12 @@ def run_code(code):
 
     Loop through the input, printing the state before each instruction.
     """
-    for statement in code:
-        print_state(statement)
-        run_instruction(statement)
 
-    print_state(statement)
+    print_state('')
+
+    for statement in code:
+        run_instruction(statement)
+        print_state(statement)
 
 
 def run_instruction(statement):
