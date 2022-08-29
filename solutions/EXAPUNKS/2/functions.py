@@ -1,13 +1,14 @@
 """This module contains implementations of the EXA functions."""
 
-import registers
+from registers import set_register, get_register, get_operand_val
+
 
 def COPY(src, dest):
     """Copy the value of the src operand into the dest operand.
 
     Syntax: COPY R/N R
     """
-    registers.set(dest, registers.get_operand_val(src))
+    set_register(dest, get_operand_val(src))
 
 
 def ADDI(op1, op2, dest):
@@ -15,7 +16,7 @@ def ADDI(op1, op2, dest):
 
     Syntax: ADDI R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) + registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) + get_operand_val(op2))
 
 
 def SUBI(op1, op2, dest):
@@ -23,7 +24,7 @@ def SUBI(op1, op2, dest):
 
     Syntax: SUBI R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) - registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) - get_operand_val(op2))
 
 
 def MULI(op1, op2, dest):
@@ -31,7 +32,7 @@ def MULI(op1, op2, dest):
 
     Syntax: MULI R/N R/N
     """
-    registers.set(dest, registers.get_operand_val(op1) * registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) * get_operand_val(op2))
 
 
 def DIVI(op1, op2, dest):
@@ -39,9 +40,7 @@ def DIVI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(
-        dest, registers.get_operand_val(op1) // registers.get_operand_val(op2)
-    )
+    set_register(dest, get_operand_val(op1) // get_operand_val(op2))
 
 
 def MODI(op1, op2, dest):
@@ -49,34 +48,32 @@ def MODI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(dest, registers.get_operand_val(op1) % registers.get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) % get_operand_val(op2))
 
 
-def TEST(op1, tester=None, op2=None):
+def TEST(op1, tester, op2):
     """
     Compare value of first operand to the value of second operand.
     If equal, set T register to 1, otherwise set the T register to 0.
     The same syntax is used for the < (less than) and > (greater than) tests.
 
     Syntax: TEST R/N = R/N
-    Also:   TEST EOF to check if at end of file
     """
 
-    if op1 == "EOF":
-        result = file.is_current_file_at_eof()
-    else:
-        import operator
+    import operator
 
-        op_mapper = {
-            "=": operator.eq,
-            ">": operator.gt,
-            "<": operator.lt,
-        }
-        result = op_mapper[tester](
-            registers.get_operand_val(op1), registers.get_operand_val(op2)
-        )
+    # Python's operator module is used here to simplify <, >, and ==.
+    # When we see a '<', '>', or '=', we call the corresponding function
+    # in the operator module, and it will perform the <, >, and == as needed.
+    # This could be written as an if/elif/else of course.
+    op_mapper = {
+        "=": operator.eq,
+        ">": operator.gt,
+        "<": operator.lt,
+    }
+    result = op_mapper[tester](get_operand_val(op1), get_operand_val(op2))
 
-    registers.set("T", int(result))
+    set_register("T", int(result))
 
 
 """Map instructions to the functions that implements it."""

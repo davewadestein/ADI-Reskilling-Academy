@@ -1,44 +1,39 @@
 import registers
 import functions
 
-# Global vars...not the greatest form, but easier than passing them all around.
-command = ""            # command
-args = ()               # arguments to the command
 
+def print_state(statement):
+    """Print out current instruction and value of registers."""
 
-def print_state(code):
-    """Print out current instruction, value of registers, and address of
-    next instruction.
-    """
-    global command, args
-
+    if statement:
+        print(f"{str(statement):25s}", end=" ... ")
     registers.print_registers()
 
 
 def run_code(code):
     """Run the code!
 
-    Loop through the input, printing the state after each instruction.
+    Loop through the input, printing the state before each instruction.
     """
+
+    print_state("")
+
     for statement in code:
-        print_state(statement)
-        print(statement)
         run_instruction(statement)
+        print_state(statement)
 
-    print_state(statement)
 
-
-def run_instruction(instruction):
+def run_instruction(statement):
     """Run an instruction by plugging it into the map and getting back a
     tuple of functions to invoke."""
-    global command, args
+    # first, split up the instruction into the command and its args
+    instruction, args = statement[0], statement[1:]
 
-    command, args = instruction[0], instruction[1:]
-
-    if command in functions.func_mapper:
+    if instruction in functions.func_mapper:
         # func_mapper contains a reference to a function we want to call.
         # args is a list of args which we want to unpack/explode into separate
         # args because the functions expect separate args.
-        functions.func_mapper[command](*args)
+        functions.func_mapper[instruction](*args)
     else:
-        raise Exception(f'Unknown Instruction: {command}')
+        # if we got here, then we recevied an unknown instruction
+        raise Exception(f"Unknown Instruction: {instruction}")
