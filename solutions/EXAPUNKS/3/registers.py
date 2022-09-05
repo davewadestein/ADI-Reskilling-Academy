@@ -32,7 +32,7 @@ def validate_register(name):
         raise Exception("Invalid F register access: File not open!")
 
 
-def get(name):
+def get_register(name):
     """Get register value.
 
     If register is F, we have to read from the current file and put the value
@@ -45,7 +45,7 @@ def get(name):
     return registers[name]
 
 
-def set(name, val):
+def set_register(name, val):
     """Set register value.
 
     If register is F, we have to write the value to the current file at the

@@ -1,6 +1,6 @@
 """This module contains implementations of the EXA functions."""
 
-import registers
+from registers import is_register, get_register, set_register
 import labels
 
 
@@ -11,17 +11,17 @@ def get_valid_int(arg):
     try:
         val = int(arg)
     except ValueError:
-        raise Exception("Not a number") from ValueError
+        raise TypeError("Not a number") from ValueError
     else:
         if -MAX_NUM <= val <= MAX_NUM:
             return val
-    raise Exception("Number out of range -9999..9999")
+    raise ValueError("Number out of range -9999..9999")
 
 
 def get_operand_val(arg):
     """Get the value of an operand, either a register or value."""
-    if registers.is_register(arg):
-        return registers.get(arg)
+    if is_register(arg):
+        return get_register(arg)
     return get_valid_int(arg)
 
 
@@ -30,7 +30,7 @@ def COPY(src, dest):
 
     Syntax: COPY R/N R
     """
-    registers.set(dest, get_operand_val(src))
+    set_register(dest, get_operand_val(src))
 
 
 def ADDI(op1, op2, dest):
@@ -38,7 +38,7 @@ def ADDI(op1, op2, dest):
 
     Syntax: ADDI R/N R/N R
     """
-    registers.set(dest, get_operand_val(op1) + get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) + get_operand_val(op2))
 
 
 def SUBI(op1, op2, dest):
@@ -46,7 +46,7 @@ def SUBI(op1, op2, dest):
 
     Syntax: SUBI R/N R/N R
     """
-    registers.set(dest, get_operand_val(op1) - get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) - get_operand_val(op2))
 
 
 def MULI(op1, op2, dest):
@@ -54,7 +54,7 @@ def MULI(op1, op2, dest):
 
     Syntax: MULI R/N R/N
     """
-    registers.set(dest, get_operand_val(op1) * get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) * get_operand_val(op2))
 
 
 def DIVI(op1, op2, dest):
@@ -62,7 +62,7 @@ def DIVI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(dest, get_operand_val(op1) // get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) // get_operand_val(op2))
 
 
 def MODI(op1, op2, dest):
@@ -70,7 +70,7 @@ def MODI(op1, op2, dest):
 
     Syntax: R/N R/N R
     """
-    registers.set(dest, get_operand_val(op1) % get_operand_val(op2))
+    set_register(dest, get_operand_val(op1) % get_operand_val(op2))
 
 
 def TEST(op1, tester=None, op2=None):
@@ -91,4 +91,4 @@ def TEST(op1, tester=None, op2=None):
         "<": operator.lt,
     }
     result = op_mapper[tester](get_operand_val(op1), get_operand_val(op2))
-    registers.set("T", int(result))
+    set_register("T", int(result))

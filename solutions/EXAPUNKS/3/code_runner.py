@@ -1,4 +1,4 @@
-import registers
+from registers import print_registers, get_register, set_register
 import functions
 import labels
 
@@ -28,7 +28,7 @@ def print_state(statement):
 
     if statement:
         print(f"{str(statement):25s}", end=" ... ")
-    registers.print_registers()
+    print_registers()
 
 
 def setup_labels(code):
@@ -78,14 +78,14 @@ def TJMP(label):
     """Jump if TRUE. Update instruction pointer to label address."""
     global instruction_ptr
 
-    if registers.get("T") != 0:
+    if get_register("T") != 0:
         set_instruction_ptr(labels.get_label(label))
 
 
 # Should be same func as above, just change sense of test
 def FJMP(label):
     """Jump if FALSE. Update instruction pointer to label address."""
-    if registers.get("T") == 0:
+    if get_register("T") == 0:
         set_instruction_ptr(labels.get_label(label))
 
 
