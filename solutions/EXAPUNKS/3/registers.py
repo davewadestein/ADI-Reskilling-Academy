@@ -22,39 +22,20 @@ def is_register(arg):
 
 
 def validate_register(name):
-    """Ensure register name is valid.
-
-    If register is F, also ensure file is open.
-    """
+    """Ensure register name is valid."""
     if not is_register(name):
         raise Exception(f"Illegal Register Name: {name}")
-    if name == "F" and not file.is_open():
-        raise Exception("Invalid F register access: File not open!")
 
 
 def get_register(name):
-    """Get register value.
-
-    If register is F, we have to read from the current file and put the value
-    into the F register, then return that.
-    """
+    """Get register value."""
     validate_register(name)
-
-    if name == "F":
-        registers[name] = file.read_value_from_file()
     return registers[name]
 
 
 def set_register(name, val):
-    """Set register value.
-
-    If register is F, we have to write the value to the current file at the
-    current position, then put the value in F.
-    """
+    """Set register value."""
     validate_register(name)
-
-    if name == "F":
-        file.write_value_to_file(val)
     registers[name] = val
 
 
