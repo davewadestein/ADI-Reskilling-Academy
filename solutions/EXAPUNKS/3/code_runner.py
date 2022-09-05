@@ -2,48 +2,54 @@ import registers
 import functions
 import labels
 
-# Global vars...not the greatest form, but easier than passing them all around.
-command = ""            # command
-args = ()               # arguments to the command
-instruction_ptr = 0     # instruction_ptr
+instruction_ptr = 0
 
 
-def print_state(code):
-    """Print out current instruction, value of registers, and address of
-    next instruction.
-    """
-    global command, args
+def get_instruction_ptr():
+    return instruction_ptr
 
-    if command == "MARK":
-        print("...NOOP...")
-    else:
-        registers.print_registers()
 
-    if instruction_ptr < len(code):
-        print(f"Next instruction: ({instruction_ptr}) {code[instruction_ptr]}")
+def increment_instruction_ptr():
+    global instruction_ptr
+
+    instruction_ptr += 1
+
+    return instruction_ptr
+
+
+def set_instruction_ptr(pos):
+    global instruction_ptr
+
+    instruction_ptr = pos
+
+
+def print_state(statement):
+    """Print out current instruction and value of registers."""
+
+    if statement:
+        print(f"{str(statement):25s}", end=" ... ")
+    registers.print_registers()
 
 
 def setup_labels(code):
     """Make a pass through the code to find and mark all labels."""
-    global instruction_ptr
-
     for instruction_ptr, (instruction, *args) in enumerate(code):
         if instruction == "MARK":
             labels.create_label(args[0], instruction_ptr)
+
+    labels.print_all_labels()
 
 
 def run_instruction(instruction):
     """Run an instruction by plugging it into the map and getting back a tuple
     of function(s) to invoke."""
-    global command, args
-
     command, *args = instruction
 
     if command in func_mapper:
         for func in func_mapper[command]:
             func(*args)
     else:
-        raise Exception(f'Unknown Instruction: {command}')
+        raise Exception(f"Unknown Instruction: {command}")
 
 
 def run_code(code):
@@ -52,17 +58,14 @@ def run_code(code):
     First, set up the labels, then reset the instruction pointer and loop
     through the code, printing the state after each instruction.
     """
-    global instruction_ptr, command, args
-
     setup_labels(code)
-    instruction_ptr = 0
 
-    while instruction_ptr < len(code):
-        print_state(code)
-        run_instruction(code[instruction_ptr])
-        instruction_ptr += 1
+    current_ptr = get_instruction_ptr()
 
-    print_state(code)
+    while code[current_ptr][0] != "END":
+        print_state(code[current_ptr])
+        run_instruction(code[current_ptr])
+        current_ptr = increment_instruction_ptr()
 
 
 """Jump commands possibly move the file pointer and therefore are here with the
@@ -70,30 +73,25 @@ code which handles running instructions. The functions module contains only "pur
 functions so we don't want these there.
 """
 
+
 def TJMP(label):
-    """Jump if TRUE. Return new position of instruction pointer or None if no
-    movement is desired."""
+    """Jump if TRUE. Update instruction pointer to label address."""
     global instruction_ptr
 
     if registers.get("T") != 0:
-        instruction_ptr = labels.get_label(label)
+        set_instruction_ptr(labels.get_label(label))
 
 
 # Should be same func as above, just change sense of test
 def FJMP(label):
-    """Jump if FALSE. Return new position of instruction pointer or None if no
-    movement is desired."""
-    global instruction_ptr
-
+    """Jump if FALSE. Update instruction pointer to label address."""
     if registers.get("T") == 0:
-        instruction_ptr = labels.get_label(label)
+        set_instruction_ptr(labels.get_label(label))
 
 
 def JUMP(label):
-    """Unconditional jump."""
-    global instruction_ptr
-
-    instruction_ptr = labels.get_label(label)
+    """Unconditional jump. Same as above without a test."""
+    set_instruction_ptr(labels.get_label(label))
 
 
 # Map instructions to a sequence of one or more functions that should be called.
@@ -106,7 +104,7 @@ func_mapper = {
     "SUBI": (functions.SUBI,),
     "DIVI": (functions.DIVI,),
     "MODI": (functions.MODI,),
-    "TEST": (registers.TEST,),
+    "TEST": (functions.TEST,),
     "MARK": (),
     "TJMP": (labels.ensure_valid_label, TJMP),
     "FJMP": (labels.ensure_valid_label, FJMP),
