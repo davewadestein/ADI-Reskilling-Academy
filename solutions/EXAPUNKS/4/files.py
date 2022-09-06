@@ -24,7 +24,8 @@ def print_file_info():
             pos = current_file["cursor"]
         else:
             pos = "EOF"
-        print(f"Current file: {current_file}, position: {pos}")
+        print(f'File: {current_file["name"]} (pos: {current_file["cursor"]})', end='')
+    print()
 
 
 def print_final_value_of_files():

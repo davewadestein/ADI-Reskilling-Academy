@@ -66,4 +66,3 @@ def print_registers():
     print("registers:", end=" ")
     for register in registers:
         print(f"{register} ({registers[register]})", end="  ")
-    print()
