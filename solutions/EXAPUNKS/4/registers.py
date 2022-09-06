@@ -10,9 +10,10 @@ MAX_NUM = 9999
 # would have us creating a register(s) type and associated methods.
 registers = {
     "X": 0,
-    "T": None,
+    "T": 0,
     "F": None,
 }
+
 
 def is_register(arg):
     """Return True if arg is a named register. You could use the code below
@@ -29,12 +30,12 @@ def validate_register(name):
     If register is F, also ensure file is open.
     """
     if not is_register(name):
-        raise Exception(f'Illegal Register Name: {name}')
-    if name == "F" and not files.is_open():
-        raise Exception('Invalid F register access: File not open!')
+        raise Exception(f"Illegal Register Name: {name}")
+    if name == "F" and not files.file_is_open():
+        raise Exception("Invalid F register access: File not open!")
 
 
-def get(name):
+def get_register(name):
     """Get register value.
 
     If register is F, we have to read from the current file and put the value
@@ -47,7 +48,7 @@ def get(name):
     return registers[name]
 
 
-def set(name, val):
+def set_register(name, val):
     """Set register value.
 
     If register is F, we have to write the value to the current file at the
@@ -62,50 +63,7 @@ def set(name, val):
 
 def print_registers():
     """Print all registers and their contents."""
+    print("registers:", end=" ")
     for register in registers:
-        print(f"register {register} = {registers[register]}")
-
-
-def get_valid_int(arg):
-    """Return integer value of arg if valid."""
-    try:
-        val = int(arg)
-    except ValueError:
-        raise Exception("Not a number") from ValueError
-    else:
-        if -MAX_NUM <= val <= MAX_NUM:
-            return val
-    raise Exception("Number out of range -9999..9999")
-
-
-def get_operand_val(arg):
-    """Get the value of an operand, either a register or value."""
-    if is_register(arg):
-        return get(arg)
-    return get_valid_int(arg)
-
-
-def TEST(op1, tester=None, op2=None):
-    """
-    Compare value of first operand to the value of second operand.
-    If equal, set T register to 1, otherwise set the T register to 0.
-    The same syntax is used for the < (less than) and > (greater than) tests.
-
-    Syntax: TEST R/N = R/N
-    Also:   TEST EOF to check if at end of file
-    """
-
-    if op1 == "EOF":
-        result = files.is_current_file_at_eof()
-    else:
-        import operator
-
-        op_mapper = {
-            "=": operator.eq,
-            ">": operator.gt,
-            "<": operator.lt,
-        }
-        result = op_mapper[tester](
-            get_operand_val(op1), get_operand_val(op2)
-        )
-    set("T", int(result))
+        print(f"{register} ({registers[register]})", end="  ")
+    print()
