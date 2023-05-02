@@ -1,5 +1,5 @@
 # Jenkins server URL:
-http://54.224.183.233:8080/
+
 
 # Week 5 survey link
 https://www.surveymonkey.com/r/ADI_Week5_DWS
